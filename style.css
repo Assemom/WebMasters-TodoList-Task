@@ -1,9 +1,8 @@
-
 body {
     min-height: 100vh;
     background: linear-gradient(135deg, #4158d0, #c850c0);
     padding: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .todo-app {
@@ -28,10 +27,6 @@ body {
 }
 
 /* Form Styles */
-.input-group {
-    gap: 10px;
-}
-
 .form-control {
     border: 2px solid #e2e8f0;
     padding: 12px;
@@ -107,7 +102,6 @@ body {
     color: #a0aec0;
 }
 
-
 #notification-container {
     position: fixed;
     top: 20px;
@@ -140,6 +134,7 @@ body {
         transform: translateX(100%);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
@@ -150,6 +145,7 @@ body {
     from {
         opacity: 1;
     }
+
     to {
         opacity: 0;
     }
@@ -162,12 +158,52 @@ body {
         padding: 20px;
     }
 
+    .task-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 420px) {
+    .todo-app {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    #task-input {
+        width: 100%;
+        margin: 10px 0px;
+    }
+
+    .add-btn {
+        border-radius: 8px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+
     .input-group {
+        display: flex;
         flex-direction: column;
     }
 
     .task-actions {
-        flex-direction: column;
+        flex-direction: row;
+    }
+}
+@media (max-width: 330px) {
+    .todo-app {
+        margin: 20px;
+        padding: 20px;
+    }
+    .task-item {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .task-content{
+        margin-left: 5px;
+        margin-bottom: 5px;
+    }
+    .task-actions {
+        flex-direction: row;
     }
 }
 
@@ -176,6 +212,7 @@ body {
         opacity: 0;
         transform: translateX(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
